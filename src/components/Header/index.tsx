@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as _ from "./style";
 import profile from "../../assets/Profile.jpg";
 import Modal from "./Modal";
+import GameModal from "./GameModal";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import board from "../../assets/group-users.png";
@@ -9,9 +10,11 @@ import goods from "../../assets/boxes.png";
 import price from "../../assets/diagram.png";
 import chat from "../../assets/chat.png";
 import home from "../../assets/home.png";
+import game from "../../assets/games.png";
 
 const Header = () => {
   const [isModal, setIsModal] = useState<boolean>(false);
+  const [isGameModal, setIsGameModal] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const { isLoggedIn } = useAuth();
@@ -88,7 +91,16 @@ const Header = () => {
             <_.MenuIcon src={chat} />
             채팅하기
           </_.MenuButton>
+
+          <_.MenuButton
+            onClick={() => {
+              setIsGameModal(!isGameModal);
+            }}
+          >
+            <_.MenuIcon src={game} />팬 게임
+          </_.MenuButton>
         </_.MenuWrapper>
+        {isGameModal ? <GameModal /> : null}
       </_.HeaderContainer>
     </_.HeaderWrapper>
   );
