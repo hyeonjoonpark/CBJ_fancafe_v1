@@ -4,6 +4,11 @@ import profile from "../../assets/Profile.jpg";
 import Modal from "./Modal";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
+import board from "../../assets/group-users.png";
+import goods from "../../assets/boxes.png";
+import price from "../../assets/diagram.png";
+import chat from "../../assets/chat.png";
+import home from "../../assets/home.png";
 
 const Header = () => {
   const [isModal, setIsModal] = useState<boolean>(false);
@@ -37,6 +42,53 @@ const Header = () => {
             </_.HeaderAuthWrapper>
           </_.HeaderProfileWrapper>
         )}
+
+        <_.MenuLine />
+
+        <_.MenuWrapper>
+          <b>Menu</b>
+          <_.MenuButton
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <_.MenuIcon src={home} />
+            메인화면
+          </_.MenuButton>
+
+          <_.MenuButton
+            onClick={() => {
+              navigate("/board");
+            }}
+          >
+            <_.MenuIcon src={board} />
+            게시판
+          </_.MenuButton>
+          <_.MenuButton
+            onClick={() => {
+              navigate("/goods");
+            }}
+          >
+            <_.MenuIcon src={goods} />
+            굿즈보기
+          </_.MenuButton>
+          <_.MenuButton
+            onClick={() => {
+              navigate("/price");
+            }}
+          >
+            <_.MenuIcon src={price} />
+            시세확인
+          </_.MenuButton>
+          <_.MenuButton
+            onClick={() => {
+              navigate("/chat");
+            }}
+          >
+            <_.MenuIcon src={chat} />
+            채팅하기
+          </_.MenuButton>
+        </_.MenuWrapper>
       </_.HeaderContainer>
     </_.HeaderWrapper>
   );

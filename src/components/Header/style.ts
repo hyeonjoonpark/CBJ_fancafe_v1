@@ -1,3 +1,4 @@
+import exp from "constants";
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
@@ -10,7 +11,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   height: 100vh;
   background: rgba(142, 192, 228, 0.3);
-  width: 16%;
+  width: 17%;
   flex-direction: column;
 `;
 
@@ -55,4 +56,43 @@ export const HeaderAuth = styled.button`
   font-size: 10px;
   font-weight: bold;
   border: none;
+`;
+
+export const MenuWrapper = styled.div`
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+`;
+
+export const MenuButton = styled.button`
+  width: 240px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: transparent;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const MenuIcon = styled.img`
+  height: 25px;
+  width: auto;
+`;
+
+export const MenuLine = styled.div`
+  width: 200px;
+  height: 1.5px;
+  background-color: rgb(204, 204, 204);
+  margin-top: 70px;
 `;
