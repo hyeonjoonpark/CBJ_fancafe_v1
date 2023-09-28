@@ -2,7 +2,7 @@ import exp from "constants";
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
-  width: 100vw;
+  width: 17%;
   height: 100vh;
 `;
 
@@ -11,7 +11,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   height: 100vh;
   background: rgba(142, 192, 228, 0.3);
-  width: 17%;
+  width: 100%;
   flex-direction: column;
 `;
 

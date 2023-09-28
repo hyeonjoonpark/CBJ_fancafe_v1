@@ -1,10 +1,17 @@
 import React from "react";
 import Header from "../Header";
+import * as _ from "./style";
 
-export default function Board() {
+const Board = () => {
   return (
-    <div>
+    <_.BoardWrapper>
       <Header />
-    </div>
+      <_.BoardContainer>
+        <_.BoardLink>Menu 〉 게시글작성</_.BoardLink>
+        <_.BoardTitle>게시판</_.BoardTitle>
+      </_.BoardContainer>
+    </_.BoardWrapper>
   );
-}
+};
+
+export default Board;

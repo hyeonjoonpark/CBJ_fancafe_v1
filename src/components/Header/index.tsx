@@ -65,7 +65,7 @@ const Header = () => {
             }}
           >
             <_.MenuIcon src={board} />
-            게시판
+            게시글작성
           </_.MenuButton>
           <_.MenuButton
             onClick={() => {
