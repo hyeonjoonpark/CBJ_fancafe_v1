@@ -14,7 +14,7 @@ export default function Chat() {
         <_.ChatTitle>채팅</_.ChatTitle>
         <_.UserList
           onClick={() => {
-            navigate("/chat/1");
+            navigate("/chat/@hyeonjoonpark");
           }}
         >
           <_.UserProfile src={userImg} />

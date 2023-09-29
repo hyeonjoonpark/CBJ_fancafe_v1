@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuth } from "../../hooks/useAuth";
 import * as L from "./style";
-import logo from "../../assets/Profile.jpg";
+import logo from "../../assets/picture.jpeg";
 
 function Login() {
   const {

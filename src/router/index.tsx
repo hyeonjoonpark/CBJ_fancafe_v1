@@ -7,6 +7,7 @@ import GoodsPage from "../pages/GoodsPage";
 import PricePage from "../pages/PricePage";
 import ChatPage from "../pages/ChatPage";
 import User from "../components/Chat/User";
+import SignUpPage from "../pages/SignUpPage";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
       <Switch>
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
         <Route path="/board" element={<BoardPage />} />
         <Route path="/goods" element={<GoodsPage />} />
         <Route path="/price" element={<PricePage />} />

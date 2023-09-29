@@ -35,6 +35,7 @@ export const ChatForm = styled.div`
   background: rgba(142, 176, 228, 0.7);
   margin-left: 100px;
   margin-bottom: 100px;
+  overflow: auto;
 `;
 
 export const ChatSubmitForm = styled.form`
@@ -58,6 +59,6 @@ export const ChatInput = styled.input`
 export const ChatSubmit = styled.button`
   height: 45px;
   width: 80px;
-  margin-left: 3%;
+  margin-left: 2.5%;
   border-radius: 10px;
 `;
