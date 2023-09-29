@@ -28,32 +28,36 @@ export const ChatLink = styled.h1`
   margin-top: 80px;
 `;
 
-export const UserList = styled.div`
-  margin-left: 100px;
-  background: rgba(142, 176, 228, 0.7);
-  margin-top: 50px;
+export const ChatForm = styled.div`
   width: 80%;
-  height: 80px;
+  height: 100%;
+  align-items: center;
+  background: rgba(142, 176, 228, 0.7);
+  margin-left: 100px;
+  margin-bottom: 100px;
+`;
+
+export const ChatSubmitForm = styled.form`
+  width: 100%;
+  height: 50px;
+  display: inline-block;
+  justify-content: center;
+  bottom: 0;
+  gap: 20px;
+`;
+
+export const ChatInput = styled.input`
+  bottom: 0;
+  width: 85%;
+  height: 40px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
+  margin-top: 75%;
+  margin-left: 2%;
 `;
 
-export const UserProfile = styled.img`
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  margin: 10px 10px;
-`;
-
-export const UserName = styled.span`
-  height: 70px;
-  width: 200px;
-  margin: 10px 30px;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  font-size: 20px;
+export const ChatSubmit = styled.button`
+  height: 45px;
+  width: 80px;
+  margin-left: 3%;
+  border-radius: 10px;
 `;

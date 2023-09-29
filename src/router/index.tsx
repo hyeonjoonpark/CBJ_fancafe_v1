@@ -6,6 +6,7 @@ import BoardPage from "../pages/BoardPage";
 import GoodsPage from "../pages/GoodsPage";
 import PricePage from "../pages/PricePage";
 import ChatPage from "../pages/ChatPage";
+import User from "../components/Chat/User";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/goods" element={<GoodsPage />} />
         <Route path="/price" element={<PricePage />} />
         <Route path="/chat" element={<ChatPage />} />
+        <Route path="/chat/:id" element={<User />} />
       </Switch>
     </>
   );
