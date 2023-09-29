@@ -4,11 +4,18 @@ import * as _ from "./style";
 import axios from "axios";
 import GoodsList from "./GoodsList"; // GoodsList 컴포넌트를 가져옵니다.
 import { GoodsItem } from "./types/index"; // 사용자 정의 타입을 가져옵니다.
+import { useNavigate } from "react-router-dom";
 
 export default function Goods() {
   const [goodsData, setGoodsData] = useState<GoodsItem[]>([]); // 상품 데이터를 저장하는 상태 변수
+  const navigate = useNavigate();
 
   useEffect(() => {
+    const userId = localStorage.getItem("id");
+    if (!userId) {
+      alert("로그인 후 이용해주세요.");
+      navigate("/login");
+    }
     axios
       .get("http://localhost:9901/api/goods")
       .then((res) => {

@@ -28,13 +28,21 @@ export const ChatLink = styled.h1`
   margin-top: 80px;
 `;
 
-export const UserList = styled.div`
+export const UserList = styled.ul`
   margin-left: 100px;
   background: rgba(142, 176, 228, 0.7);
   margin-top: 50px;
   width: 80%;
   height: 80px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const UserMenu = styled.li`
+  list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
