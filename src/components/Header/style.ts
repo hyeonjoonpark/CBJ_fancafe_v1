@@ -24,8 +24,8 @@ export const HeaderProfileWrapper = styled.div`
 `;
 
 export const HeaderProfileImg = styled.img`
-  width: 70%;
-  height: 70%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 `;
 
@@ -65,7 +65,7 @@ export const MenuWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 20px;
 `;
 
 export const MenuButton = styled.button`
@@ -94,5 +94,5 @@ export const MenuLine = styled.div`
   width: 200px;
   height: 1.5px;
   background-color: rgb(204, 204, 204);
-  margin-top: 70px;
+  margin-top: 40px;
 `;
