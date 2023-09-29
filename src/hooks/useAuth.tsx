@@ -30,7 +30,7 @@ export const useAuth = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleLoginSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -63,7 +63,7 @@ export const useAuth = () => {
     handleInputId,
     handleInputEmail,
     handleInputPw,
-    handleSubmit,
+    handleLoginSubmit,
     handleLogout,
     isLoggedIn,
   };

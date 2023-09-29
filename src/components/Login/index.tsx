@@ -11,13 +11,13 @@ function Login() {
     handleInputId,
     handleInputEmail,
     handleInputPw,
-    handleSubmit,
+    handleLoginSubmit,
   } = useAuth();
 
   return (
     <L.PageWrapper>
       <L.LoginContainer>
-        <L.LoginWrap onSubmit={handleSubmit}>
+        <L.LoginWrap onSubmit={handleLoginSubmit}>
           <L.LoginTitle>로그인</L.LoginTitle>
           <L.LoginInput
             type="text"
