@@ -29,7 +29,7 @@ export default function SignUp() {
         formData
       );
       console.log(response);
-      window.location.replace("/login"); // 회원가입 성공 시 리다이렉션 경로를 변경
+      window.location.replace("/profile"); // 회원가입 성공 시 리다이렉션 경로를 변경
     } catch (err) {
       setError("회원가입에 실패하였습니다. 다시 시도해주세요.");
       console.error(err);

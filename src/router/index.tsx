@@ -8,6 +8,7 @@ import PricePage from "../pages/PricePage";
 import ChatPage from "../pages/ChatPage";
 import User from "../components/Chat/User";
 import SignUpPage from "../pages/SignUpPage";
+import ProfileUpload from "../components/Profile/Upload";
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
         <Route path="/price" element={<PricePage />} />
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/chat/:id" element={<User />} />
+        <Route path="/profile" element={<ProfileUpload />} />
       </Switch>
     </>
   );

@@ -33,4 +33,5 @@ export const GoodsListWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-left: 80px;
+  height: auto;
 `;
