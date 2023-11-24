@@ -7,7 +7,7 @@ const GameModal = () => {
     <div>
       <Link to="#">
         <_.ModalWrapper>
-          <_.GameTitle>키우기 게임</_.GameTitle>
+          <_.GameTitle>BBamjune Fan Studio</_.GameTitle>
         </_.ModalWrapper>
       </Link>
 

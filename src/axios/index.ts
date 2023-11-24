@@ -35,7 +35,7 @@ axiosInstance.interceptors.response.use(
   async function (error) {
     if (error.response && error.response.status === 403) {
       const { access, refresh } = error.response.data;
-
+      console.log(access, refresh);
       if (access && refresh) {
         localStorage.setItem("access", access);
         localStorage.setItem("refresh", refresh);
@@ -63,9 +63,12 @@ export const login = async (id: string, email: string, password: string) => {
       password: password,
     });
 
+    const accessToken = response.data.data.token;
+    const refreshToken = response.data.data.user.refToken;
+
     return {
-      access: response.data.accToken,
-      refresh: response.data.refToken,
+      access: accessToken,
+      refresh: refreshToken,
       id: response.data.id,
       email: response.data.email,
       message: response.data.message,

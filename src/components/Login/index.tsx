@@ -52,7 +52,6 @@ function Login() {
           <L.LoginButton>로그인</L.LoginButton>
         </L.LoginWrap>
       </L.LoginContainer>
-      <L.LogoWrapper src={logo} />
     </L.PageWrapper>
   );
 }

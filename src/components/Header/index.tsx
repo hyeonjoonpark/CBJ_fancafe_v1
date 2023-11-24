@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import * as _ from "./style";
-import profile from "../../assets/Profile.jpg";
 import Modal from "./Modal";
 import GameModal from "./GameModal";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import board from "../../assets/group-users.png";
 import goods from "../../assets/boxes.png";
-import price from "../../assets/diagram.png";
 import chat from "../../assets/chat.png";
 import home from "../../assets/home.png";
 import game from "../../assets/games.png";
 import picture from "../../assets/picture.jpeg";
+import mainLogo from "../../assets/mainLogo.png";
 
 const Header = () => {
   const [isModal, setIsModal] = useState<boolean>(false);
@@ -51,6 +50,8 @@ const Header = () => {
 
         <_.MenuLine />
 
+        <_.LogoImg src={mainLogo} />
+
         <_.MenuWrapper>
           <b>Menu</b>
           <_.MenuButton
@@ -78,14 +79,7 @@ const Header = () => {
             <_.MenuIcon src={goods} />
             굿즈보기
           </_.MenuButton>
-          <_.MenuButton
-            onClick={() => {
-              navigate("/price");
-            }}
-          >
-            <_.MenuIcon src={price} />
-            시세확인
-          </_.MenuButton>
+
           <_.MenuButton
             onClick={() => {
               navigate("/chat");

@@ -31,7 +31,7 @@ export const ChatLink = styled.h1`
 export const UserList = styled.ul`
   margin-left: 100px;
   background: rgba(142, 176, 228, 0.7);
-  margin-top: 50px;
+  margin-top: 30px;
   width: 80%;
   height: 80px;
   border-radius: 10px;
