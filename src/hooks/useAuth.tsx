@@ -16,7 +16,7 @@ export const useAuth = () => {
     } else {
       setIsLoggedIn(false);
     }
-  }, [isLoggedIn]);
+  }, []);
 
   const handleInputId = (e: ChangeEvent<HTMLInputElement>) => {
     setId(e.target.value);
@@ -35,13 +35,14 @@ export const useAuth = () => {
 
     try {
       const { access, refresh, message } = await login(id, email, password);
+      console.log(access, refresh);
       localStorage.setItem("access", access);
       localStorage.setItem("refresh", refresh);
       localStorage.setItem("id", id);
       localStorage.setItem("email", email);
       // setIsLoggedIn((prev) => !prev); // 로그인 성공 시 isLoggedIn을 true로 설정
       console.log(id, email, message, isLoggedIn);
-      window.location.replace("/chat");
+      window.location.replace("/");
     } catch (error) {
       console.log("로그인에 실패했습니다.", error);
     }

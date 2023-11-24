@@ -9,9 +9,7 @@ export const ModalWrapper = styled.button`
   background-color: transparent;
   border: none;
   font-size: 14px;
-  text-decoration: none;
   color: black;
-  text-decoration: none;
 `;
 
 export const GameTitle = styled.span`

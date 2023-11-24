@@ -62,3 +62,10 @@ export const ChatSubmit = styled.button`
   margin-left: 2.5%;
   border-radius: 10px;
 `;
+
+export const ChatWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  overflow: auto;
+`;

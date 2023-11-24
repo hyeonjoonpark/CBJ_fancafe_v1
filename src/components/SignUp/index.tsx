@@ -74,7 +74,6 @@ export default function SignUp() {
             <S.SignUpButton>회원가입</S.SignUpButton>
           </S.SignUpWrap>
         </S.SignUpContainer>
-        <S.LogoWrapper src={logo} />
       </S.PageWrapper>
     </div>
   );

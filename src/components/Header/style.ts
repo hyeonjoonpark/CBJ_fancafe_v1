@@ -1,4 +1,3 @@
-import exp from "constants";
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
@@ -13,6 +12,7 @@ export const HeaderContainer = styled.div`
   background: rgba(142, 192, 228, 0.3);
   width: 100%;
   flex-direction: column;
+  overflow: auto;
 `;
 
 export const HeaderProfileWrapper = styled.div`
@@ -69,7 +69,7 @@ export const MenuWrapper = styled.div`
 `;
 
 export const MenuButton = styled.button`
-  width: 240px;
+  width: 80%;
   height: 40px;
   border-radius: 10px;
   border: 1px solid #000;
@@ -91,8 +91,13 @@ export const MenuIcon = styled.img`
 `;
 
 export const MenuLine = styled.div`
-  width: 200px;
+  width: 80%;
   height: 1.5px;
   background-color: rgb(204, 204, 204);
   margin-top: 40px;
+`;
+
+export const LogoImg = styled.img`
+  width: 200px;
+  height: 100px;
 `;

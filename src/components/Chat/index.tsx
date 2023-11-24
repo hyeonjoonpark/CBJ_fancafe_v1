@@ -46,21 +46,21 @@ export default function Chat() {
       <_.ChatContainer>
         <_.ChatLink>Menu 〉 채팅하기</_.ChatLink>
         <_.ChatTitle>채팅</_.ChatTitle>
-        <_.UserList>
-          {users &&
-            users.length > 0 &&
-            users.map((user) => (
+        {users &&
+          users.length > 0 &&
+          users.map((user) => (
+            <_.UserList>
               <_.UserMenu
                 key={user.id}
                 onClick={() => {
-                  navigate(`/chat/${user.id}`);
+                  navigate(`/chat/@${user.id}`);
                 }}
               >
                 <_.UserProfile src={user.profileImage} />
                 {user.id} 님
               </_.UserMenu>
-            ))}
-        </_.UserList>
+            </_.UserList>
+          ))}
       </_.ChatContainer>
     </_.ChatWrapper>
   );
