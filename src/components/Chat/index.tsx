@@ -21,7 +21,7 @@ export default function Chat() {
           `http://localhost:9901/api/users?id=${id}`,
           {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem("acc_token")}`,
+              Authorization: `Bearer ${localStorage.getItem("access")}`,
             },
           }
         );
@@ -31,13 +31,6 @@ export default function Chat() {
         alert("사용자 목록을 불러오는 중 오류가 발생했습니다.");
       }
     };
-
-    if (!id) {
-      alert("로그인 후 이용해주세요.");
-      navigate("/login");
-    } else {
-      fetchUserList();
-    }
   }, [navigate, id]);
 
   return (
