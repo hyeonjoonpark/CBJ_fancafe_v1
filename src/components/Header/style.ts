@@ -65,7 +65,7 @@ export const MenuWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 80px;
 `;
 
 export const MenuButton = styled.button`
