@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import * as _ from "./style";
+import axios from "axios";
 
 interface User {
   id: string;
@@ -12,26 +12,23 @@ interface User {
 export default function Chat() {
   const navigate = useNavigate();
   const [users, setUsers] = useState<User[]>([]);
-  const id = localStorage.getItem("id");
+  const id: string | null = localStorage.getItem("id");
 
   useEffect(() => {
-    const fetchUserList = async () => {
+    const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:9901/api/users?id=${id}`,
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("access")}`,
-            },
-          }
+          `http://localhost:9901/api/users/list?userId=${id}`
         );
-        setUsers(response.data.data);
+        console.log(response.data);
+        setUsers(response.data);
       } catch (error) {
-        console.error(error);
-        alert("사용자 목록을 불러오는 중 오류가 발생했습니다.");
+        console.log(error);
       }
     };
-  }, [navigate, id]);
+
+    fetchUsers();
+  }, [id]);
 
   return (
     <_.ChatWrapper>
@@ -39,12 +36,10 @@ export default function Chat() {
       <_.ChatContainer>
         <_.ChatLink>Menu 〉 채팅하기</_.ChatLink>
         <_.ChatTitle>채팅</_.ChatTitle>
-        {users &&
-          users.length > 0 &&
+        {users.length > 0 ? (
           users.map((user) => (
-            <_.UserList>
+            <_.UserList key={user.id}>
               <_.UserMenu
-                key={user.id}
                 onClick={() => {
                   navigate(`/chat/@${user.id}`);
                 }}
@@ -53,7 +48,10 @@ export default function Chat() {
                 {user.id} 님
               </_.UserMenu>
             </_.UserList>
-          ))}
+          ))
+        ) : (
+          <_.UserMenu>사용자가 없습니다.</_.UserMenu>
+        )}
       </_.ChatContainer>
     </_.ChatWrapper>
   );

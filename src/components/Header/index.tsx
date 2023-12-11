@@ -9,8 +9,6 @@ import goods from "../../assets/boxes.png";
 import chat from "../../assets/chat.png";
 import home from "../../assets/home.png";
 import game from "../../assets/games.png";
-import picture from "../../assets/picture.jpeg";
-import mainLogo from "../../assets/mainLogo.png";
 
 const Header = () => {
   const [isModal, setIsModal] = useState<boolean>(false);
@@ -34,7 +32,6 @@ const Header = () => {
       <_.HeaderContainer>
         {isLoggedIn ? (
           <_.HeaderProfileWrapper>
-            <_.HeaderProfileImg src={picture} />
             <_.HeaderProfileName onClick={handleModal}>
               {userId} 님
             </_.HeaderProfileName>
@@ -49,8 +46,6 @@ const Header = () => {
         )}
 
         <_.MenuLine />
-
-        <_.LogoImg src={mainLogo} />
 
         <_.MenuWrapper>
           <b>Menu</b>
