@@ -6,3 +6,9 @@
   text-decoration: none;
   color: black;
 }
+
+/* scollbar css */
+::-webkit-scrollbar {
+  width: 0;
+  background: none;
+}
