@@ -25,13 +25,30 @@ export const GoodsLink = styled.h1`
   font-size: 20px;
   font-weight: bold;
   margin-left: 100px;
-  margin-top: 80px;
+  margin-top: 100px;
 `;
 
 export const GoodsListWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-left: 80px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  margin-top: 50px;
   height: auto;
+  width: 80%;
+  overflow: auto;
+  gap: 40px;
+  /* background-color: aliceblue; */
+  margin-bottom: 100px;
+`;
+
+export const GoodsItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border: 1px solid skyblue;
+  border-radius: 20px;
 `;
