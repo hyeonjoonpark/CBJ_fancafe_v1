@@ -36,7 +36,7 @@ export default function Chat() {
       <_.ChatContainer>
         <_.ChatLink>Menu 〉 채팅하기</_.ChatLink>
         <_.ChatTitle>채팅</_.ChatTitle>
-        {users.length > 0 ? (
+        {id != null && users.length > 0 ? (
           users.map((user) => (
             <_.UserList key={user.id}>
               <_.UserMenu
@@ -50,7 +50,9 @@ export default function Chat() {
             </_.UserList>
           ))
         ) : (
-          <_.UserMenu>사용자가 없습니다.</_.UserMenu>
+          <_.UserMenu style={{ marginLeft: "100px" }}>
+            로그인 후 이용해주세요
+          </_.UserMenu>
         )}
       </_.ChatContainer>
     </_.ChatWrapper>

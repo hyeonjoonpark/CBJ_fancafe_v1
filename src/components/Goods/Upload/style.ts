@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const GoodsWrapper = styled.div`
+export const GoodsUploadWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,50 +8,67 @@ export const GoodsWrapper = styled.div`
   width: 100%;
 `;
 
-export const GoodsContainer = styled.div`
+export const GoodsUploadContainer = styled.div`
   height: 100vh;
   width: 87%;
   right: 0;
   overflow: auto;
 `;
 
-export const GoodsTitle = styled.h1`
+export const GoodsUploadTitle = styled.h1`
   font-size: 50px;
   font-weight: bold;
   margin-left: 100px;
 `;
 
-export const GoodsLink = styled.h1`
+export const GoodsUploadLink = styled.h1`
   font-size: 20px;
   font-weight: bold;
   margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 80px;
 `;
 
-export const GoodsListWrapper = styled.div`
+export const GoodsUploadListWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-left: 100px;
-  margin-top: 50px;
   height: auto;
   width: 80%;
   overflow: auto;
   gap: 40px;
-  /* background-color: aliceblue; */
   margin-bottom: 100px;
 `;
 
-export const GoodsItem = styled.div`
+export const GoodsUploadForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
   justify-content: center;
-  height: 300px;
-  width: 300px;
+  margin-left: 100px;
+  margin-top: 60px;
+  height: auto;
+  width: 100%;
+  overflow: auto;
+  gap: 40px;
+  margin-bottom: 100px;
+`;
+
+export const GoodsUploadInputContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+`;
+
+export const GoodsUploadInput = styled.input`
+  width: 500px;
+  height: 50px;
   border: 1px solid skyblue;
   border-radius: 20px;
+  margin-left: 30px;
 `;
 
 export const GoodsUploadBtn = styled.button`
@@ -59,11 +76,8 @@ export const GoodsUploadBtn = styled.button`
   height: 50px;
   margin-left: 100px;
   margin-top: 30px;
-  border-radius: 10px;
   background-color: skyblue;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
   border: none;
-  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
 `;

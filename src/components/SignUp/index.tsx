@@ -1,6 +1,5 @@
 import React, { FormEvent, ChangeEvent, useState } from "react";
 import * as S from "./style";
-import logo from "../../assets/picture.jpeg";
 import axios from "axios";
 
 export default function SignUp() {

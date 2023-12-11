@@ -37,12 +37,16 @@ export default function Goods() {
     return `${year}-${month}-${day}`;
   };
 
+  const navigate = useNavigate();
   return (
     <_.GoodsWrapper>
       <Header />
       <_.GoodsContainer>
         <_.GoodsLink>Menu 〉 굿즈보기</_.GoodsLink>
         <_.GoodsTitle>굿즈샵</_.GoodsTitle>
+        <_.GoodsUploadBtn onClick={() => navigate("/goods/upload")}>
+          굿즈 등록
+        </_.GoodsUploadBtn>
         <_.GoodsListWrapper>
           {goodsList.map((item: GoodsItem) => (
             <_.GoodsItem key={item.goodsId}>
