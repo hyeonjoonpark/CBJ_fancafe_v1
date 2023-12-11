@@ -27,3 +27,82 @@ export const BoardLink = styled.h1`
   margin-left: 100px;
   margin-top: 80px;
 `;
+
+export const BoardTable = styled.table`
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 100px;
+`;
+
+export const BoardTableHead = styled.thead`
+  display: table-header-group;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: transparent;
+  justify-content: center;
+`;
+
+export const BoardTableHeadRow = styled.tr`
+  text-align: left;
+  background-color: #f2f2f2;
+  color: #000;
+  font-weight: 700;
+  font-size: 15px;
+`;
+
+export const BoardTableHeadData = styled.th`
+  padding: 10px;
+`;
+
+export const BoardTableBody = styled.tbody`
+  border-bottom: 1px solid #ddd;
+`;
+
+export const BoardTableRow = styled.tr`
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  font-size: 15px;
+`;
+
+export const BoardTableData = styled.td`
+  padding: 10px;
+  font-size: 15px;
+`;
+
+export const BoardTableFooter = styled.tfoot`
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: transparent;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const BoardTablePagination = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+`;
+
+export const PaginationButton = styled.button`
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  /* margin: 0 5px; */
+  cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+  }
+  margin-bottom: 30px;
+`;
