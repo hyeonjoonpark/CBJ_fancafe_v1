@@ -47,6 +47,7 @@ export const GoodsItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 300px;
   width: 300px;
   border: 1px solid skyblue;

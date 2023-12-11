@@ -4,14 +4,24 @@ import * as _ from "./style";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+interface GoodsItem {
+  goodsId: number;
+  goodsName: string;
+  price: number;
+  sellerId: string;
+  date: string;
+}
+
 export default function Goods() {
+  const [goodsList, setGoodsList] = useState<GoodsItem[]>([]);
+
   useEffect(() => {
     const fetchGoods = async () => {
       try {
         const response = await axios.get(
           "http://localhost:9901/api/goods/list"
         );
-        console.log(response.data);
+        setGoodsList(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -19,7 +29,13 @@ export default function Goods() {
     fetchGoods();
   }, []);
 
-  const goodsList = [1, 2, 3, 4, 5, 6, 7]; // 임시 데이터
+  const formatDate = (dateString: string): string => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
 
   return (
     <_.GoodsWrapper>
@@ -28,8 +44,13 @@ export default function Goods() {
         <_.GoodsLink>Menu 〉 굿즈보기</_.GoodsLink>
         <_.GoodsTitle>굿즈샵</_.GoodsTitle>
         <_.GoodsListWrapper>
-          {goodsList.map((item) => (
-            <_.GoodsItem key={item}>{item}</_.GoodsItem>
+          {goodsList.map((item: GoodsItem) => (
+            <_.GoodsItem key={item.goodsId}>
+              <div>{item.goodsName}</div>
+              <div>{item.price}원</div>
+              <div>판매자: {item.sellerId}</div>
+              <div>등록날짜: {formatDate(item.date)}</div>
+            </_.GoodsItem>
           ))}
         </_.GoodsListWrapper>
       </_.GoodsContainer>
