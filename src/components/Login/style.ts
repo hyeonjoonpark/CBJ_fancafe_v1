@@ -11,7 +11,7 @@ export const LoginContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 100%;
   height: 100%;
 `;
 
@@ -25,7 +25,9 @@ export const LoginWrap = styled.form`
 `;
 
 export const LoginTitle = styled.h1`
-  margin-right: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 30px;
 `;
 
@@ -39,12 +41,15 @@ export const LoginInput = styled.input`
 `;
 
 export const MoveSignUp = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
   font-size: 15px;
   font-weight: bold;
   color: red;
   cursor: pointer;
-  margin-right: 35%;
+  margin-right: 0%;
 `;
 
 export const LoginButton = styled.button`

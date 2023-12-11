@@ -46,7 +46,7 @@ function Login() {
               window.location.replace("/signup");
             }}
           >
-            <b style={{ color: "black" }}>아직 회원이 아니신가요?</b>{" "}
+            <div style={{ color: "black" }}>아직 회원이 아니신가요?</div>{" "}
             회원가입하기
           </L.MoveSignUp>
           <L.LoginButton>로그인</L.LoginButton>
