@@ -27,3 +27,18 @@ export const MainLink = styled.h1`
   margin-left: 100px;
   margin-top: 80px;
 `;
+
+export const MainItemWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  margin-top: 50px;
+  height: auto;
+  width: 80%;
+  overflow: auto;
+  gap: 30px;
+  /* background-color: aliceblue; */
+  margin-bottom: 100px;
+`;

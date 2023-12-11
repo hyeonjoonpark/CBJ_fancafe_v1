@@ -69,7 +69,8 @@ export default function SignUp() {
                 window.location.replace("/login");
               }}
             >
-              <b style={{ color: "black" }}>이미 가입하셨나요?</b> 로그인하기
+              <div style={{ color: "black" }}>이미 가입하셨나요?</div>{" "}
+              로그인하기
             </S.MoveLogin>
             <S.SignUpButton>회원가입</S.SignUpButton>
           </S.SignUpWrap>

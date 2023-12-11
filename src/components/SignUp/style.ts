@@ -11,7 +11,7 @@ export const SignUpContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 100%;
   height: 100%;
 `;
 
@@ -25,7 +25,9 @@ export const SignUpWrap = styled.form`
 `;
 
 export const SignUpTitle = styled.h1`
-  margin-right: 53%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 30px;
 `;
 
@@ -39,12 +41,15 @@ export const SignUpInput = styled.input`
 `;
 
 export const MoveLogin = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
   font-size: 15px;
   font-weight: bold;
   color: red;
   cursor: pointer;
-  margin-right: 40%;
+  margin-right: 0;
 `;
 
 export const SignUpButton = styled.button`
