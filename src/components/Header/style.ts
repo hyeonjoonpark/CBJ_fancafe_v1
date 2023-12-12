@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeaderWrapper = styled.div`
   width: 17%;
   height: 100vh;
+  overflow: auto;
 `;
 
 export const HeaderContainer = styled.div`

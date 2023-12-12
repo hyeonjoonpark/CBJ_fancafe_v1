@@ -44,6 +44,9 @@ export default function Goods() {
       <_.GoodsContainer>
         <_.GoodsLink>Menu 〉 굿즈보기</_.GoodsLink>
         <_.GoodsTitle>굿즈샵</_.GoodsTitle>
+        <div style={{ marginLeft: "100px" }}>
+          아직 완벽하게 완성된 기능이 아닙니다
+        </div>
         <_.GoodsUploadBtn onClick={() => navigate("/goods/upload")}>
           굿즈 등록
         </_.GoodsUploadBtn>

@@ -102,6 +102,10 @@ const Board = () => {
             </_.PaginationButton>
           </_.BoardTablePagination>
         </_.BoardTableFooter>
+
+        <_.WriteButton onClick={() => (window.location.href = "/board/write")}>
+          글 작성하기
+        </_.WriteButton>
       </_.BoardContainer>
     </_.BoardWrapper>
   );
