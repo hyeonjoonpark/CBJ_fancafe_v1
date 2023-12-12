@@ -77,15 +77,6 @@ const Header = () => {
 
           <_.MenuButton
             onClick={() => {
-              navigate("/chat");
-            }}
-          >
-            <_.MenuIcon src={chat} />
-            채팅하기
-          </_.MenuButton>
-
-          <_.MenuButton
-            onClick={() => {
               setIsGameModal(!isGameModal);
             }}
           >
