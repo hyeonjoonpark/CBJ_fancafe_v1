@@ -10,6 +10,7 @@ import User from "../components/Chat/User";
 import SignUpPage from "../pages/SignUpPage";
 import ProfileUpload from "../components/Profile/Upload";
 import GoodsUploadPage from "../pages/GoodsUploadPage";
+import WritePage from "../pages/WritePage";
 
 const Router = () => {
   return (
@@ -25,6 +26,7 @@ const Router = () => {
         <Route path="/chat/:id" element={<User />} />
         <Route path="/profile" element={<ProfileUpload />} />
         <Route path="/goods/upload" element={<GoodsUploadPage />} />
+        <Route path="/board/write" element={<WritePage />} />
       </Switch>
     </>
   );

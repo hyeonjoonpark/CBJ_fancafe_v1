@@ -69,7 +69,7 @@ export default function GoodsUpload(): JSX.Element {
                 <_.GoodsUploadInput
                   type="text"
                   id="sellerId"
-                  value={id || ""}
+                  value={id || "로그인 후 이용해주세요"}
                   readOnly
                 />
               </_.GoodsUploadInputContainer>

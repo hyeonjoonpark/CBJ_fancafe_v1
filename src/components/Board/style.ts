@@ -88,10 +88,11 @@ export const BoardTableFooter = styled.tfoot`
 export const BoardTablePagination = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 20px;
   align-items: center;
   margin-top: 30px;
+  margin-right: 100px;
 `;
 
 export const PaginationButton = styled.button`
@@ -105,4 +106,19 @@ export const PaginationButton = styled.button`
     background-color: #ddd;
   }
   margin-bottom: 30px;
+`;
+
+export const WriteButton = styled.button`
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  /* margin: 0 5px; */
+  cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+  }
+  margin-bottom: 30px;
+  margin-right: 150px;
+  float: right;
 `;
