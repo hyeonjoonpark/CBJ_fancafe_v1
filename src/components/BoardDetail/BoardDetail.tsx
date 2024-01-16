@@ -5,17 +5,14 @@ import * as B from "../Board/style";
 import * as _ from "./style";
 
 export default function BoardDetail() {
-  const id = 1;
+  const id = window.location.href.split("/")[4];
   const [boardData, setBoardData] = useState<any>({});
 
   const handleUpdateLike = () => {
     axios
-      .put(`http://localhost:9901/api/board/like/update`, {
-        likeCount: boardData.likeCount,
-      })
+      .put(`http://localhost:9901/api/board/like/update`)
       .then((res) => {
-        const likeCount = res.data;
-        setBoardData({ ...boardData, likeCount });
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
