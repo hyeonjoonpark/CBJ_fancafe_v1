@@ -2,6 +2,7 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import * as _ from "./style";
 import Header from "../../Header";
 import axiosInstance from "../../../axios";
+import axios from "axios";
 
 export default function GoodsUpload(): JSX.Element {
   const [goodsName, setGoodsName] = useState<string>("");
@@ -20,11 +21,14 @@ export default function GoodsUpload(): JSX.Element {
     e.preventDefault();
 
     try {
-      const response = await axiosInstance.post("/goods/upload", {
-        goodsName: goodsName,
-        price: price,
-        sellerId: id,
-      });
+      const response = await axios.post(
+        "http://localhost:9901/api/goods/upload",
+        {
+          goodsName: goodsName,
+          price: price,
+          sellerId: id,
+        }
+      );
 
       console.log(response);
       window.location.replace("/goods");
