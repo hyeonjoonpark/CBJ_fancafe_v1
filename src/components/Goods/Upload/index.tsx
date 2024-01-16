@@ -16,22 +16,21 @@ export default function GoodsUpload(): JSX.Element {
     setPrice(e.target.value);
   };
 
-  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    axiosInstance
-      .post("/goods/upload", {
+    try {
+      const response = await axiosInstance.post("/goods/upload", {
         goodsName: goodsName,
         price: price,
         sellerId: id,
-      })
-      .then((res) => {
-        console.log(res);
-        window.location.replace("/goods");
-      })
-      .catch((err) => {
-        console.log(err);
       });
+
+      console.log(response);
+      window.location.replace("/goods");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -65,7 +64,7 @@ export default function GoodsUpload(): JSX.Element {
               </_.GoodsUploadInputContainer>
 
               <_.GoodsUploadInputContainer>
-                <label htmlFor="sellerId">판매자명:</label>
+                <label htmlFor="sellerId">등록자명:</label>
                 <_.GoodsUploadInput
                   type="text"
                   id="sellerId"
