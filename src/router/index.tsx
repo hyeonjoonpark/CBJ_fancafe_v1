@@ -9,6 +9,7 @@ import SignUpPage from "../pages/SignUpPage";
 import ProfileUpload from "../components/Profile/Upload";
 import GoodsUploadPage from "../pages/GoodsUploadPage";
 import WritePage from "../pages/WritePage";
+import BoardDetailPage from "../pages/BoardDetailPage/BoardDetailPage";
 
 const Router = () => {
   return (
@@ -23,6 +24,7 @@ const Router = () => {
         <Route path="/profile" element={<ProfileUpload />} />
         <Route path="/goods/upload" element={<GoodsUploadPage />} />
         <Route path="/board/write" element={<WritePage />} />
+        <Route path="/board/:id" element={<BoardDetailPage />} />
       </Switch>
     </>
   );
