@@ -57,7 +57,7 @@ axiosInstance.interceptors.response.use(
 
 export const login = async (id: string, email: string, password: string) => {
   try {
-    const response = await axiosInstance.post("/login", {
+    const response = await axiosInstance.post("/auth/login", {
       id: id,
       email: email,
       password: password,

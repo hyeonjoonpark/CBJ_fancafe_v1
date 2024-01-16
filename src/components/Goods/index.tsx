@@ -45,7 +45,7 @@ export default function Goods() {
         <_.GoodsLink>Menu 〉 굿즈보기</_.GoodsLink>
         <_.GoodsTitle>굿즈샵</_.GoodsTitle>
         <div style={{ marginLeft: "100px" }}>
-          아직 완벽하게 완성된 기능이 아닙니다
+          최병준 선생님의 완벽한 굿즈를 만나보세요!
         </div>
         <_.GoodsUploadBtn onClick={() => navigate("/goods/upload")}>
           굿즈 등록
