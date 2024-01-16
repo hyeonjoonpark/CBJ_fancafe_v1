@@ -8,6 +8,17 @@ export default function BoardDetail() {
   const id = window.location.href.split("/")[4];
   const [boardData, setBoardData] = useState<any>({});
 
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}`;
+    return formattedDate;
+  };
+
   const handleUpdateLike = () => {
     axios
       .put(`http://localhost:9901/api/board/like/update`)
@@ -57,7 +68,7 @@ export default function BoardDetail() {
 
             <_.CountWrapper>
               <h3>작성자: {boardData.writer}</h3>
-              <h3>작성일: {boardData.writeDate}</h3>
+              <h3>작성일: {formatDate(boardData.writeDate)}</h3>
               <h3>👀 {boardData.viewCount}</h3>
               <h3 onClick={handleUpdateLike}>❤️ {boardData.likeCount}</h3>
             </_.CountWrapper>
