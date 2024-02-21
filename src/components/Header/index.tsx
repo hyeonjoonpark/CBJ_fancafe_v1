@@ -33,7 +33,7 @@ const Header = () => {
         {isLoggedIn ? (
           <_.HeaderProfileWrapper>
             <_.HeaderProfileName onClick={handleModal}>
-              {userId} 님
+              {localStorage.getItem("id")} 님
             </_.HeaderProfileName>
             {isModal ? <Modal /> : null}
           </_.HeaderProfileWrapper>

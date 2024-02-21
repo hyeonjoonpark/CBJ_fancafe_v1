@@ -24,23 +24,6 @@ export default function MyPageComponent() {
     const id = localStorage.getItem("id");
 
     axios
-      .get(`http://localhost:9901/api/user/info?id=${id}`)
-      .then((res) => {
-        console.log(res);
-        const id = res.data[0][0];
-        const email = res.data[0][1];
-        const isAdmin = res.data[0][2];
-        setUserInfo({
-          id,
-          email,
-          isAdmin,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    axios
       .get(`http://localhost:9901/api/board/list?id=${id}`)
       .then((res) => {
         console.log(res);
@@ -61,16 +44,9 @@ export default function MyPageComponent() {
           <_.MyPageTitle>내 정보</_.MyPageTitle>
 
           <_.MyInfoWrapper>
-            <h3>이름: {userInfo.id}</h3>
-            <h3>이메일: {userInfo.email}</h3>
-            <h3>
-              등급:{" "}
-              {userInfo.isAdmin === 1
-                ? "회장"
-                : userInfo.isAdmin === 2
-                ? "부회장"
-                : "팬카페 회원"}
-            </h3>
+            <h3>이름: {localStorage.getItem("id")}</h3>
+            <h3>이메일: {localStorage.getItem("email")}</h3>
+            <h3>등급: </h3>
           </_.MyInfoWrapper>
 
           <_.Divider />
