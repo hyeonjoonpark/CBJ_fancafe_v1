@@ -53,7 +53,7 @@ export default function ProfileUpload() {
         <_.ProfileUploadTitle>프로필 업로드</_.ProfileUploadTitle>
         <_.ProfileNameInput
           type="text"
-          placeholder="아이디를 입력해주세요"
+          placeholder={localStorage.getItem("id") || "아이디를 입력하세요"}
           name="id"
         />
         <_.ProfileUploadInput
