@@ -24,11 +24,11 @@ export default function SignUp() {
 
     try {
       const response = await axios.post(
-        "http://localhost:9901/api/signup", // 서버 주소를 상대 경로로 변경
+        "http://localhost:9901/api/auth/signUp", // 서버 주소를 상대 경로로 변경
         formData
       );
       console.log(response);
-      window.location.replace("/profile"); // 회원가입 성공 시 리다이렉션 경로를 변경
+      window.location.replace("/"); // 회원가입 성공 시 리다이렉션 경로를 변경
     } catch (err) {
       setError("회원가입에 실패하였습니다. 다시 시도해주세요.");
       console.error(err);
