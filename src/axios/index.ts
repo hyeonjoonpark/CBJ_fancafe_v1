@@ -63,14 +63,13 @@ export const login = async (id: string, email: string, password: string) => {
       password: password,
     });
 
-    const accessToken = response.data.data.token;
-    const refreshToken = response.data.data.user.refToken;
+    console.log(response.data.token);
+
+    const accessToken = response.data.token;
 
     return {
       access: accessToken,
-      refresh: refreshToken,
       id: response.data.id,
-      email: response.data.email,
       message: response.data.message,
     };
   } catch (error) {

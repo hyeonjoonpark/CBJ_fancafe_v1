@@ -11,7 +11,7 @@ export const useAuth = () => {
     const access = localStorage.getItem("access");
     const refresh = localStorage.getItem("refresh");
 
-    if (access && refresh) {
+    if (access) {
       setIsLoggedIn(true); // 로그인 성공 시 isLoggedIn을 true로 설정
     } else {
       setIsLoggedIn(false);
@@ -34,10 +34,8 @@ export const useAuth = () => {
     e.preventDefault();
 
     try {
-      const { access, refresh, message } = await login(id, email, password);
-      console.log(access, refresh);
+      const { access, message } = await login(id, email, password);
       localStorage.setItem("access", access);
-      localStorage.setItem("refresh", refresh);
       localStorage.setItem("id", id);
       localStorage.setItem("email", email);
       // setIsLoggedIn((prev) => !prev); // 로그인 성공 시 isLoggedIn을 true로 설정
