@@ -26,7 +26,7 @@ export default function BoardWrite() {
       .post("http://localhost:9901/api/board/upload", {
         title: title,
         content: content,
-        id: id,
+        writerId: id,
       })
       .then((res) => {
         console.log(res);
