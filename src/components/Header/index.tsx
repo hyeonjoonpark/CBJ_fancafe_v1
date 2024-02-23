@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import board from "../../assets/group-users.png";
 import goods from "../../assets/boxes.png";
-import chat from "../../assets/chat.png";
 import home from "../../assets/home.png";
 import game from "../../assets/games.png";
 
@@ -33,7 +32,7 @@ const Header = () => {
         {isLoggedIn ? (
           <_.HeaderProfileWrapper>
             <_.HeaderProfileName onClick={handleModal}>
-              {localStorage.getItem("id")} 님
+              {userId} 님
             </_.HeaderProfileName>
             {isModal ? <Modal /> : null}
           </_.HeaderProfileWrapper>
