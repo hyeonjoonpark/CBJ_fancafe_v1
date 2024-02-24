@@ -51,8 +51,8 @@ export default function Goods() {
           굿즈 등록
         </_.GoodsUploadBtn>
         <_.GoodsListWrapper>
-          {goodsList.map((item: GoodsItem) => (
-            <_.GoodsItem key={item.goodsId}>
+          {goodsList.map((item: GoodsItem, index: number) => (
+            <_.GoodsItem key={index}>
               <div>{item.goodsName}</div>
               <div>{item.price}원</div>
               <div>판매자: {item.sellerId}</div>
