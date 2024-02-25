@@ -46,7 +46,6 @@ export default function MyPageComponent() {
           <_.MyInfoWrapper>
             <h3>이름: {localStorage.getItem("id")}</h3>
             <h3>이메일: {localStorage.getItem("email")}</h3>
-            <h3>등급: </h3>
           </_.MyInfoWrapper>
 
           <_.Divider />
