@@ -7,10 +7,8 @@ import axios from "axios";
 interface BoardData {
   boardId: number;
   title: string;
-  writer: string;
+  userId: string;
   writeDate: string;
-  viewCount: number;
-  likeCount: number;
 }
 
 const Board = () => {
@@ -73,15 +71,10 @@ const Board = () => {
 
           <_.BoardTableBody>
             {boardData.map((boardItem) => (
-              <_.BoardTableRow
-                onClick={() => {
-                  window.location.href = `/board/${boardItem.boardId}`;
-                }}
-                key={boardItem.boardId}
-              >
+              <_.BoardTableRow>
                 <_.BoardTableData>{boardItem.boardId}</_.BoardTableData>
                 <_.BoardTableData>{boardItem.title}</_.BoardTableData>
-                <_.BoardTableData>{boardItem.writer}</_.BoardTableData>
+                <_.BoardTableData>{boardItem.userId}</_.BoardTableData>
                 <_.BoardTableData>
                   {formatDate(boardItem.writeDate)}
                 </_.BoardTableData>
