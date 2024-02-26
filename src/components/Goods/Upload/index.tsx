@@ -22,7 +22,7 @@ export default function GoodsUpload(): JSX.Element {
 
     try {
       const response = await axios.post(
-        "http://115.140.87.3/api/goods/upload",
+        "http://115.140.87.3:8080/api/goods/upload",
         {
           goodsName: goodsName,
           price: price,
