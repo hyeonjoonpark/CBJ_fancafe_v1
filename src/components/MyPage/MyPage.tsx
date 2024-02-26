@@ -24,7 +24,7 @@ export default function MyPageComponent() {
     const id = localStorage.getItem("id");
 
     axios
-      .get(`http://localhost:9901/api/board/list?id=${id}`)
+      .get(`http://115.140.87.3/api/board/list?id=${id}`)
       .then((res) => {
         console.log(res);
         setBoardData(res.data.content);

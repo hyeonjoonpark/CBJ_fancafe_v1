@@ -24,7 +24,7 @@ export default function SignUp() {
 
     try {
       const response = await axios.post(
-        "http://localhost:9901/api/auth/signUp", // 서버 주소를 상대 경로로 변경
+        "http://115.140.87.3/api/auth/signUp", // 서버 주소를 상대 경로로 변경
         formData
       );
       console.log(response);

@@ -18,9 +18,7 @@ export default function Goods() {
   useEffect(() => {
     const fetchGoods = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:9901/api/goods/list"
-        );
+        const response = await axios.get("http://115.140.87.3/api/goods/list");
         setGoodsList(response.data);
       } catch (error) {
         console.log(error);

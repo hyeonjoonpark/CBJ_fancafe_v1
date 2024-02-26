@@ -21,7 +21,7 @@ export default function BoardDetail() {
 
   const handleUpdateLike = () => {
     axios
-      .put(`http://localhost:9901/api/board/like/update`)
+      .put(`http://115.140.87.3/api/board/like/update`)
       .then((res) => {
         console.log(res);
       })
