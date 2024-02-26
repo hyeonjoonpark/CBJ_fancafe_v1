@@ -23,7 +23,7 @@ export default function BoardWrite() {
 
     // try {
     const response = await axios
-      .post("http://localhost:9901/api/board/upload", {
+      .post("http://115.140.87.3/api/board/upload", {
         title: title,
         content: content,
         writerId: id,

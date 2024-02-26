@@ -20,7 +20,7 @@ const Board = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:9901/api/board/list?page=${currentPage}&size=${pageSize}`
+          `http://115.140.87.3/api/board/list?page=${currentPage}&size=${pageSize}`
         );
         setBoardData(response.data.content);
       } catch (error) {
